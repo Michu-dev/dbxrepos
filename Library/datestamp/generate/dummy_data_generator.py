@@ -1,6 +1,6 @@
 
 
-def main(spark, path):
+def dummy_data_generator(spark, path):
     df_list = [('EUR', 4.71),
                ('USD', 4.35),
                ('GBP', 5.37),
