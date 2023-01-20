@@ -13,7 +13,7 @@ def generate_dummy_data(spark, path):
                             # nazwy kolumn:
                             ["curr", "value"])
     
-    df.write.format("csv").mode("overwrite").save(path)
+    df.write.options(header='True').format("csv").mode("overwrite").save(path)
 
 
 

@@ -7,7 +7,7 @@ def generate_date(spark, read_path, write_path):
 
     existing_records.withColumn("datestamp", lit(datetime.now()))
 
-    existing_records.df.write.format("txt").save(write_path)
+    existing_records.df.write.options(header='True').format("csv").save(write_path)
 
     
 
