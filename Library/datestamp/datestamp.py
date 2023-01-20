@@ -1,7 +1,7 @@
 from datetime import datetime
 from pyspark.sql.functions import *
 
-def generateDate(spark, read_path, write_path):
+def generate_date(spark, read_path, write_path):
 
     existing_records = spark.read.options(header='True').csv(read_path)
 
